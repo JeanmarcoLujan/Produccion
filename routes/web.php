@@ -19,4 +19,23 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+
+Route::resource('camion', 'CamionController');
+
+Route::resource('cargador', 'CargadorController');
+Route::get('/select-cargador', 'CargadorController@selects');
+
+Route::resource('compactadora', 'CompactadoraController');
+
+Route::resource('exc-retroexc', 'ExcavadoraController');
+Route::get('/select-exc', 'ExcavadoraController@selects');
+
+Route::resource('motoniveladora', 'MotoniveladoraController');
+
+Route::resource('tractor', 'TractorController');
+
+
 Route::resource('/produccion/{id}/{type}', 'ProduccionController@mostrar');
+
+
+
