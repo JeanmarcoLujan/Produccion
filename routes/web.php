@@ -33,6 +33,7 @@ Route::get('/select-exc', 'ExcavadoraController@selects');
 Route::resource('motoniveladora', 'MotoniveladoraController');
 
 Route::resource('tractor', 'TractorController');
+Route::get('/select-tractor', 'TractorController@selects');
 
 
 Route::resource('/produccion/{id}/{type}', 'ProduccionController@mostrar');

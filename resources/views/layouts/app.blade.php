@@ -98,5 +98,8 @@
     @section('scripts_excavadora')
     @show
 
+    @section('scripts_tractor')
+    @show
+
 </body>
 </html>

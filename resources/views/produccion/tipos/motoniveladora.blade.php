@@ -63,7 +63,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td>Número de pasadas (un solo sentido)</td>
+                                    <td class="success">Número de pasadas (un solo sentido)</td>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -118,23 +118,23 @@
                 <form>
                     <div class="modal-body">
 
-                        <h4>Parámetros de entrada del equipo</h4>
-                        <div class="col-md-6">
+                        <h5><strong>Parámetros de entrada del equipo</strong></h5>
+                        <div class="col-md-4">
                             <div class="form-group">
-                                <label for="c_capacidad" class="control-label">Velocidad de avance (km/h):</label>
-                                <input type="text" class="form-control" id="c_capacidad">
+                                <label for="m_vel_avance" class="control-label">Velocidad de avance (km/h):</label>
+                                <input type="text" class="form-control" id="m_vel_avance">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="form-group">
-                                <label for="c_capacidad" class="control-label">Velocidad de retroceso (km/h):</label>
-                                <input type="text" class="form-control" id="c_capacidad">
+                                <label for="m_vel_retroceso" class="control-label">Velocidad de retroceso (km/h):</label>
+                                <input type="text" class="form-control" id="m_vel_retroceso">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="form-group">
-                                <label for="c_capacidad" class="control-label">Velocidad en 1ª marcha (km/h):</label>
-                                <input type="text" class="form-control" id="c_capacidad">
+                                <label for="m_vel_primera" class="control-label">Velocidad en 1ª marcha (km/h):</label>
+                                <input type="text" class="form-control" id="m_vel_primera">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -143,13 +143,31 @@
                                 <input type="text" class="form-control" id="c_capacidad">
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label for="c_capacidad" class="control-label">Factor de eficiencia:</label>
                                 <input type="text" class="form-control" id="c_capacidad">
                             </div>
                         </div>
-
+                        <h5><strong>Parámetros de entrada del terreno</strong></h5>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="c_capacidad" class="control-label">Largura (m):</label>
+                                <input type="text" class="form-control" id="c_capacidad">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="c_capacidad" class="control-label">Longitus a ser regularizada(m):</label>
+                                <input type="text" class="form-control" id="c_capacidad">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="c_capacidad" class="control-label">Espesura suelta de la capa (m):</label>
+                                <input type="text" class="form-control" id="c_capacidad">
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

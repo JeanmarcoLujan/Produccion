@@ -15,6 +15,7 @@ class Tractor extends Model
     protected $fillable=[
     	'tractor_id',
     	'gmachine_id',
+        'hoja_tapadora',
     	'capa_tapadora',
         'peso',
     	'tiempo_operacion',

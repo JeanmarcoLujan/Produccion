@@ -150,96 +150,177 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    <h4 class="modal-title" id="myModalLabel">DATOS DE TRACTOR</h4>
                 </div>
-                <div class="modal-body">
-                    <form>
-                        <h4>Parámetros de entrada del equipo</h4>
+                <form id="formTractor">
+                    <div class="modal-body">
+
+                        <h5><strong>Parámetros de entrada del equipo</strong></h5>
+                        <input type="hidden" name="_token" id="token" value="{{csrf_token()}}">
+                        <input type="hidden" class="form-control" name="gmachine_id" value="1">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="t_hojat" class="control-label">Hoja topadora:</label>
-                                <input type="text" class="form-control" id="t_hojat">
+                                <label for="hoja_tapadora" class="control-label">Hoja topadora:</label>
+                                <input type="text" class="form-control" name="hoja_tapadora" >
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="t_capacidad" class="control-label">Capacidad  de hoja topadora (m3):</label>
-                                <input type="text" class="form-control" id="t_capacidad">
+                                <label for="capa_tapadora" class="control-label">Capacidad  de hoja topadora (m3):</label>
+                                <input type="text" class="form-control" name="capa_tapadora" id="t_capacidad">
                             </div>
                         </div>
                         
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="t_peso" class="control-label">Peso total de tractor(tn):</label>
-                                <input type="text" class="form-control" id="t_peso">
+                                <label for="peso" class="control-label">Peso total de tractor(tn):</label>
+                                <input type="text" class="form-control" name="peso">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="t_tiempo_fijo" class="control-label">Tiempos fijos de operación(m3):</label>
-                                <input type="text" class="form-control" id="t_tiempo_fijo">
+                                <label for="tiempo_operacion" class="control-label">Tiempos fijos de operación(m3):</label>
+                                <input type="text" class="form-control" name="tiempo_operacion">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="t_factor_eficiencia" class="control-label">Factor eficiencia:</label>
-                                <input type="text" class="form-control" id="t_factor_eficiencia">
+                                <label for="factor_eficiencia" class="control-label">Factor eficiencia:</label>
+                                <input type="text" class="form-control" name="factor_eficiencia">
                             </div>
                         </div>
                         <hr>
-                        <h4>Parámetros de entrada del terreno</h4>
+                        <h5><strong>Parámetros de entrada del terreno</strong></h5>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="t_declive" class="control-label">Declive del terreno:</label>
-                                <input type="text" class="form-control" id="t_declive">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="t_densidad_material" class="control-label">Densidad del material (tn/m3):</label>
-                                <input type="text" class="form-control" id="t_densidad_material">
+                                <label for="declive_terreno" class="control-label">Declive del terreno:</label>
+                                <select class="form-control" name="declive_terreno" id="t_declive"></select>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="t_dist_transporte" class="control-label">Distancia de transporte (m):</label>
-                                <input type="text" class="form-control" id="t_dist_transporte">
+                                <label for="densidad_material" class="control-label">Densidad del material (tn/m3):</label>
+                                <input type="text" class="form-control" name="densidad_material">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="t_coef_rodamiento" class="control-label">Coeficiente de rodamiento (Kg/t):</label>
-                                <input type="text" class="form-control" id="t_coef_rodamiento">
+                                <label for="distancia_transporte" class="control-label">Distancia de transporte (m):</label>
+                                <input type="text" class="form-control" name="distancia_transporte">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="t_factor_convvolumen" class="control-label">Factor de conversion de volumenes:</label>
-                                <input type="text" class="form-control" id="t_factor_convvolumen">
+                                <label for="factor_conversion" class="control-label">Factor de conversion de volumenes:</label>
+                                <input type="text" class="form-control" name="factor_conversion">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="form-group">
-                                <label for="t_coef_adherencia" class="control-label">Coeficiente de adherencia:</label>
-                                <input type="text" class="form-control" id="t_coef_adherencia">
+                                <label for="coef_rodamiento" class="control-label">Coeficiente de rodamiento (Kg/tn):</label>
+                                <input type="text" class="form-control" name="coef_rodamiento">
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-4">
                             <div class="form-group">
-                                <label for="t_coef_friccion" class="control-label">Coeficiente de fricción de carga:</label>
-                                <input type="text" class="form-control" id="t_coef_friccion">
+                                <label for="coef_adherencia" class="control-label">Coeficiente de adherencia:</label>
+                                <input type="text" class="form-control" name="coef_adherencia">
                             </div>
                         </div>
-                    </form>
-                    
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Registrar</button>
-                </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="coef_friccion" class="control-label">Coeficiente de fricción de carga:</label>
+                                <input type="text" class="form-control" name="coef_friccion">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="register_trator">Registrar</button>
+                    </div>
+                </form>
             </div>
           </div>
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts_tractor')
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#register_trator').on('click', register);
+        selects();
+        
+    });
+
+    function selects() {
+        var route = "http://localhost/costohproduccion/public/select-tractor";
+        $.get(route, function(res){
+            $(res).each(function(key,value){
+                console.log(res);
+                
+                var html="";
+                html+="<option selected disabled>Seleccione declive del terreno</option>";
+                for (var i = 0; i < res.rampas.length; i++) {
+                    html+="<option value="+res.rampas[i].ramp_id+">"+res.rampas[i].rampa+"</option>";
+                }
+                $("#t_declive").append(html);
+                
+            });
+        });
+    }
+
+    function register() {
+        
+        //console.log($('#formTractor').serializeArray());
+
+        var json = toJSONString( document.getElementById( "formTractor" ) );
+        var route = "http://localhost/costohproduccion/public/tractor";
+        $.ajax({
+            type        : type,
+            headers     : {'X-CSRF-TOKEN': token},
+            url         : route,
+            data        : sendDatos, 
+            dataType    : 'json', 
+            success:function(result){
+                document.getElementById("formMachine").reset();
+                successHtml = '<div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><ul><li>' + result.mensaje + '</li></ul></di>';
+                $( '#alerta' ).html( successHtml ); 
+                listar_machines();
+            },
+            error : function(jqXhr) {
+                var errors = jqXhr.responseJSON; 
+                errorsHtml = '<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><ul>';
+                $.each( errors, function( key, value ) {
+                    errorsHtml += '<li>' + value[0] + '</li>';
+                });
+                errorsHtml += '</ul></di>';
+                $( '#alerta' ).html( errorsHtml );
+            }
+        });
+
+        
+
+        //console.log(sendDatos);
+    }
+
+    function toJSONString( form ) {
+        var obj = {};
+        var elements = form.querySelectorAll( "input, select" );
+        for( var i = 0; i < elements.length; ++i ) {
+            var element = elements[i];
+            var name = element.name;
+            var value = element.value;
+
+            if( name ) {
+                obj[ name ] = value;
+            }
+        }
+
+        return JSON.stringify( obj );
+    }
+
+</script>
 @endsection
