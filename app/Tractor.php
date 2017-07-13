@@ -24,8 +24,15 @@ class Tractor extends Model
     	'densidad_material',
     	'distancia_transporte',
     	'coef_rodamiento',
-        'factor_conversion'
+        'factor_conversion',
     	'coef_adherencia',
     	'coef_friccion'
     ];
+
+
+
+    public function ramp()
+    {
+        return $this->belongsTo('App\Ramp','declive_terreno');
+    }
 }

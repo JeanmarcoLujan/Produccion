@@ -101,5 +101,11 @@
     @section('scripts_tractor')
     @show
 
+    @section('scripts_motoniveladora')
+    @show
+
+    @section('scripts_compactadora')
+    @show
+
 </body>
 </html>

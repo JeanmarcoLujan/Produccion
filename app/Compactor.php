@@ -19,8 +19,8 @@ class Compactor extends Model
     	'n_rodillos',
     	'ancho_rodillo',
         'espesura_capa',
-    	'longitud_regularizada',
-    	'espesura_suelta',
-    	'velocidad_avance'
+    	'factor_eficiencia',
+    	'velocidad_avance',
+        'densidad_material'
     ];
 }

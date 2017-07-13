@@ -17,10 +17,12 @@ class Grader extends Model
     	'gmachine_id',
     	'velocidad_avance',
         'velocidad_retroceso',
+        'velocidad_primera',
     	'ancho_lamina',
     	'factor_eficiencia',
     	'ancho',
     	'longitud_regularizada',
-    	'espesura'
+    	'espesura',
+        'densidad_material'
     ];
 }

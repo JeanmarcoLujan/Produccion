@@ -20,6 +20,8 @@ class Excavator extends Model
     	'factor_conver_vol',
     	'factor_eficiencia',
     	'bexcavator_id',
-    	'cexcavator_id'
+    	'cexcavator_id',
+        'profundidad_exc',
+        'densidad_material'
     ];
 }

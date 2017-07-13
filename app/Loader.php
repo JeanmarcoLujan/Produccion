@@ -15,13 +15,15 @@ class Loader extends Model
     protected $fillable=[
     	'loader_id',
     	'gmachine_id',
-    	'capcidad_cucharon',
+    	'capacidad_cucharon',
         'distancia_transporte',
     	'aloader_id',
     	'bloader_id',
     	'cloader_id',
     	'dloader_id',
     	'velo_transporte',
-    	'eloader_id'
+    	'eloader_id',
+        'factor_eficiencia',
+        'densidad_material'
     ];
 }
